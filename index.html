@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <h1>Previsão De Chuva Horária</h1>
+
+    <div class="card-wrapper">
+        <div class="card-item">
+            <main></main>
+        </div>
+    </div>
+
+    <div class="descricao">
+        <h4>Legenda</h1>
+        <p class="Primeiro">Sem Chuva <span> . < 0.2mm</span> </p>
+        <p class="Segundo">Chuva Fraca <span> 0.2mm a 5.0 mm</span> </p>
+        <p class="Terceiro">Chuva Moderada <span> 5.1mm a 25.0 mm</span></p>
+        <p class="Quarto">Chuva Forte <span> . > 25.0 mm</span> </p>
+    </div>
+
+    
+
+</body>
+
+<script>
+
+    //Iniciar FrontEnd = npx lite-server
+
+    async function getContent() {
+        try{
+            const response = await fetch("http://localhost:3000/")
+            //console.log(response)
+            const data = await response.json()
+
+            show(data)
+
+        }catch (error){
+            console.log(error)
+        }
+    }
+
+    getContent()
+
+    function show(users) {
+
+        const i = 1
+
+        let output = ``
+
+        for (let user of users) {
+            output += `<li>${user.name}</li>`
+            output += `<li>${user.data}</li>`
+            output += `<li>${user.hora}</li>`
+        }
+
+        document.querySelector(`main`).innerHTML = output
+    }
+
+    // 
+    
+</script>

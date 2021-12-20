@@ -1,0 +1,47 @@
+/*Corpo*/
+body{
+    background-color: hsl(260, 25%, 14%);
+    color: #D1DEB5;
+}
+
+/*Titulo*/
+h1{
+    padding: 20px;
+    text-align: center;
+}
+/*Itens do Backend*/
+main li{
+    
+    text-align: center;
+}
+
+main li id{
+    color: #BA3A36;
+}
+
+/*Descrição do Final*/
+.descricao{
+    padding: 30px;
+    display: inline-block;
+}
+
+.descricao h4{
+    padding: 10px;
+}
+
+.descricao .Primeiro{
+ color: #3A6B36;
+}
+.descricao .Segundo{
+ color: #172086;
+}
+.descricao .Terceiro{
+ color: #A5833B;
+}
+.descricao .Quarto{
+ color: #B13D3C;
+}
+
+span{
+    color: #D1DEB5;
+}
